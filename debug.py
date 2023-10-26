@@ -6,8 +6,12 @@ from lib.zoo import Zoo
 
 # e.g.  
 
-# z1 = Zoo( 'Micke Grove Zoo', 'Lodi, CA' )
-# a1 = Animal( 'Lion', 75, 'Luke', z1 )
+z1 = Zoo( 'Micke Grove Zoo', 'Lodi, CA' )
+z2= Zoo('Phoenix Zoe', 'Phoenix, AZ')
+a1 = Animal( 'Lion', 75, 'Luke', z1 )
+a2 = Animal('Tiger', 108, 'Jim', z2)
+a3 = Animal('Bear', 12, 'BooBoo', z1)
+a4 = Animal('Lion', 78, 'Leia', z1)
 
 
 
