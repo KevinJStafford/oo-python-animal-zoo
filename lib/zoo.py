@@ -20,13 +20,14 @@ class Zoo:
             if a.species not in new_list:
                 new_list.append(a.species)
         return new_list
-        
+
+    @property    
     def animal_nickname(self):
         return [animal.nickname for animal in Animal.all if animal.zoo == self]
-    
-    def __repr__(self):
-        return f'<Zoo name="{self.name}" location="{self.location}" >'
     
     @classmethod
     def find_by_location(cls, location):
         return [zoo for zoo in cls.all if zoo.location == location] 
+
+    def __repr__(self):
+        return f'<Zoo name="{self.name}" location="{self.location}" >'
