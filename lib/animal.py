@@ -34,3 +34,6 @@ class Animal:
     @classmethod
     def find_by_species(cls, species):
         return [animal for animal in cls.all if animal.species == species]
+    
+    def __repr__(self):
+        return f'<Animal name="{self.nickname}" location="{self.zoo}" >'
