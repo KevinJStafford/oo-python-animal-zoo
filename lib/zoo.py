@@ -8,6 +8,10 @@ class Zoo:
         self.name = name
         self.location = location
         Zoo.all.append(self)
+
+    def __repr__(self):
+        return f'<Zoo name="{self.name}" location="{self.location}" >'
+
     
     def animals(self):
         animals_list = []
@@ -22,11 +26,10 @@ class Zoo:
             if a.species not in new_list:
                 new_list.append(a.species)
         return new_list
-        # return [a.species for a in Animal.all if a.zoo == self]
-
+        
     def animal_nickname(self):
         return [animal.nickname for animal in Animal.all if animal.zoo == self]
     
     @classmethod
     def find_by_location(cls, location):
-        return [zoo for zoo in Zoo.all if zoo.location == cls] 
+        return [zoo for zoo in cls.all if zoo.location == location] 
